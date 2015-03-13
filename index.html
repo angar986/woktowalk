@@ -1,0 +1,420 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+<script language="javascript" type="text/javascript" src="js/jquery.js"></script>
+<script language="javascript" type="text/javascript" src="js/jquery-ui.min.js"></script>
+<script language="javascript" type="text/javascript" src="js/funciones.js"></script>
+<link href='css/estilo.css' rel='stylesheet' type='text/css'/>
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<script src="js/bootstrap.min.js"></script>
+<style>
+@font-face {
+    font-family: Lato;
+    src: url(css/Lato-Regular.ttf);
+}
+
+</style>
+<title>MultiPOS</title>
+</head>
+<body>
+<img src='images/background_home.jpg' id='imgfondo' style='height:100%;'/>
+<div class='container'>
+<div class='row' style='height:100%;'>
+<div class='col-sm-12' id='central'>
+<div style='height:20%;' class='row' id='cabeza'>
+	<div class="col-xs-12 col-sm-12"><table><tr><td><img src='images/wtw-logo.png' class='logo'/></td><td><h1>MultiPOS</h1></td></tr></table></div>
+</div>
+<div style='height:80%;' class='row' id='cuerpo'>
+<div class='col-xs-8 col-sm-8' style='height:100%; min-height:100%;'>
+	<div id='contentpaso' class='row'>
+		<span class='labelpaso2' id='frase'>ESCOGE TU BASE</span>
+		<span class='labelpaso' id='npaso'>1</span>
+		<div class='col-xs-12 col-sm-12 tablaopciones' id='opcionesbase'>
+			<div class='col-xs-4 col-sm-4 col-md-4'>
+				<div class='ingrediente' id='1' cal='175' gram='50' nombre='Tallarines de huevo' precio='12.50' onclick='AgregarBase(this);'>
+				<div class='ingname'>Tallarines de huevo</div>
+				<div>
+				<img src='images/bases/pasta.png' style='margin:3px; height:50%;'/>
+				</div>
+				<span class='inginfo'>
+					<label>175 gr. / </label>
+					<label>50 cal.</label>
+				</span>
+				</div>
+			</div>
+			<div class='col-xs-4 col-sm-4 col-md-4'>
+				<div class='ingrediente' id='2' cal='100' gram='40' nombre='Tallarines Integrales' precio='10.00' onclick='AgregarBase(this);'>
+				<div class='ingname'>Tallarines Integrales</div>
+				<div>
+				<img src='images/bases/pasta.png' style=' margin:3px; height:50%;'/>
+				</div>
+				<span class='inginfo'>
+					<label>100 gr. / </label>
+					<label>40 cal.</label>
+				</span>
+				</div>
+			</div>
+			<div class='col-xs-4 col-sm-4 col-md-4'>
+				<div class='ingrediente' id='3' cal='100' gram='40' nombre='Tallarines de Arroz' precio='10.00' onclick='AgregarBase(this);'>
+				<div class='ingname'>Tallarines de Arroz</div>
+				<div>
+				<img src='images/bases/pasta.png' style='margin:3px; height:50%;'/>
+				</div>
+				<span class='inginfo'>
+					<label>100 gr. / </label>
+					<label>40 cal.</label>
+				</span>
+				</div>
+			</div>
+			<div class='col-xs-4 col-sm-4 col-md-4'>
+				<div class='ingrediente' id='4' cal='100' gram='40' nombre='Tallarines Udon' precio='10.00' onclick='AgregarBase(this);'>
+				<div class='ingname'>Tallarines Udon</div>
+				<div>
+				<img src='images/bases/pasta.png' style='margin:3px; height:50%;'/>
+				</div>
+				<span class='inginfo'>
+					<label>100 gr. / </label>
+					<label>40 cal.</label>
+				</span>
+				</div>
+			</div>
+			<div class='col-xs-4 col-sm-4 col-md-4'>
+				<div class='ingrediente' id='5' cal='100' gram='40' nombre='Arroz Blanco' precio='10.00' onclick='AgregarBase(this);'>
+				<div class='ingname'>Arroz Blanco</div>
+				<div>
+				<img src='images/bases/arroz.png' style='margin:3px; height:50%;'/>
+				</div>
+				<span class='inginfo'>
+					<label>100 gr. / </label>
+					<label>40 cal.</label>
+				</span>
+				</div>
+			</div>
+			<div class='col-xs-4 col-sm-4 col-md-4'>
+				<div class='ingrediente' id='6' cal='100' gram='40' nombre='Arroz Integral' precio='10.00' onclick='AgregarBase(this);'>
+				<div class='ingname'>Arroz Integral</div>
+				<div>
+				<img src='images/bases/arroz.png' style='margin:3px; height:50%;'/>
+				</div>
+				<span class='inginfo'>
+					<label>100 gr. / </label>
+					<label>40 cal.</label>
+				</span>
+				</div>
+			</div>
+			<div class='col-xs-4 col-sm-4 col-md-4'>
+				<div class='ingrediente' id='6' cal='100' gram='40' nombre='Verdura Mixta' precio='10.00' onclick='AgregarBase(this);'>
+				<div class='ingname'>Verdura Mixta</div>
+				<div>
+				<img src='images/bases/verdura.png' style='margin:3px; height:50%;'/>
+				</div>
+				<span class='inginfo'>
+					<label>100 gr. / </label>
+					<label>40 cal.</label>
+				</span>
+				</div>
+			</div>
+			<div class='col-xs-12 col-sm-12 col-md-12' style='text-align:center; margin-top:10px;'>
+			<button type='button' class='btn btn-center btn-lg btn-primary' onclick='Pasar();'>SIGUIENTE</button>
+			</div>
+		</div>
+		<div class='col-xs-12 col-sm-12 tablaopciones' style='display:none;' id='opcionesfavoritos'>
+			<div class='col-xs-3 col-sm-3 col-md-3'>
+				<div class='ingrediente' id='7' cal='175' gram='50' nombre='Pollo' precio='12.50' onclick='AgregarIngrediente(this);'>
+				<div class='ingname'>Pollo</div>
+				<div>
+				<img src='images/bases/pasta.png' style='margin:3px;'/>
+				</div>
+				<span class='inginfo'>
+					<label>175 gr. / </label>
+					<label>50 cal.</label>
+				</span>
+				</div>
+			</div><div class='col-xs-3 col-sm-3 col-md-3'>
+				<div class='ingrediente' id='8' cal='175' gram='50' nombre='Ternera' precio='12.50' onclick='AgregarIngrediente(this);'>
+				<div class='ingname'>Ternera</div>
+				<div>
+				<img src='images/bases/pasta.png' style='margin:3px;'/>
+				</div>
+				<span class='inginfo'>
+					<label>175 gr. / </label>
+					<label>50 cal.</label>
+				</span>
+				</div>
+					</div><div class='col-xs-3 col-sm-3 col-md-3'>
+				<div class='ingrediente' id='9' cal='175' gram='50' nombre='Bacon' precio='12.50' onclick='AgregarIngrediente(this);'>
+				<div class='ingname'>Bacon</div>
+				<div>
+				<img src='images/bases/pasta.png' style='margin:3px;'/>
+				</div>
+				<span class='inginfo'>
+					<label>175 gr. / </label>
+					<label>50 cal.</label>
+				</span>
+				</div>
+					</div><div class='col-xs-3 col-sm-3 col-md-3'>
+				<div class='ingrediente' id='10' cal='175' gram='50' nombre='Gambas' precio='12.50' onclick='AgregarIngrediente(this);'>
+				<div class='ingname'>Gambas</div>
+				<div>
+				<img src='images/bases/pasta.png' style='margin:3px;'/>
+				</div>
+				<span class='inginfo'>
+					<label>175 gr. / </label>
+					<label>50 cal.</label>
+				</span>
+				</div>
+				</div>
+				<div class='col-xs-3 col-sm-3 col-md-3'>
+				<div class='ingrediente' id='11' cal='175' gram='50' nombre='Shitake' precio='12.50' onclick='AgregarIngrediente(this);'>
+				<div class='ingname'>Shitake</div>
+				<div>
+				<img src='images/bases/pasta.png' style='margin:3px;'/>
+				</div>
+				<span class='inginfo'>
+					<label>175 gr. / </label>
+					<label>50 cal.</label>
+				</span>
+				</div>
+				</div>
+				<div class='col-xs-3 col-sm-3 col-md-3'>
+				<div class='ingrediente' id='12' cal='175' gram='50' nombre='Champiñones' precio='12.50' onclick='AgregarIngrediente(this);'>
+				<div class='ingname'>Champiñones</div>
+				<div>
+				<img src='images/bases/pasta.png' style='margin:3px;'/>
+				</div>
+				<span class='inginfo'>
+					<label>175 gr. / </label>
+					<label>50 cal.</label>
+				</span>
+				</div>
+				</div>
+				<div class='col-xs-3 col-sm-3 col-md-3'>
+				<div class='ingrediente' id='13' cal='175' gram='50' nombre='Mezcla de Pimientos' precio='12.50' onclick='AgregarIngrediente(this);'>
+				<div class='ingname'>Mezcla de Pimientos</div>
+				<div>
+				<img src='images/bases/pasta.png' style='margin:3px;'/>
+				</div>
+				<span class='inginfo'>
+					<label>175 gr. / </label>
+					<label>50 cal.</label>
+				</span>
+				</div>
+				</div>
+				<div class='col-xs-3 col-sm-3 col-md-3'>
+				<div class='ingrediente' id='14' cal='175' gram='50' nombre='Anacardos' precio='12.50' onclick='AgregarIngrediente(this);'>
+				<div class='ingname'>Anacardos</div>
+				<div>
+				<img src='images/bases/pasta.png' style='margin:3px;'/>
+				</div>
+				<span class='inginfo'>
+					<label>175 gr. / </label>
+					<label>50 cal.</label>
+				</span>
+				</div>
+				</div>
+				<div class='col-xs-3 col-sm-3 col-md-3'>
+				<div class='ingrediente' id='15' cal='175' gram='50' nombre='Brócoli' precio='12.50' onclick='AgregarIngrediente(this);'>
+				<div class='ingname'>Brócoli</div>
+				<div>
+				<img src='images/bases/pasta.png' style='margin:3px;'/>
+				</div>
+				<span class='inginfo'>
+					<label>175 gr. / </label>
+					<label>50 cal.</label>
+				</span>
+				</div>
+				</div>
+				<div class='col-xs-3 col-sm-3 col-md-3'>
+				<div class='ingrediente' id='16' cal='175' gram='50' nombre='Espinacas' precio='12.50' onclick='AgregarIngrediente(this);'>
+				<div class='ingname'>Espinacas</div>
+				<div>
+				<img src='images/bases/pasta.png' style='margin:3px;'/>
+				</div>
+				<span class='inginfo'>
+					<label>175 gr. / </label>
+					<label>50 cal.</label>
+				</span>
+				</div>
+				</div>
+				
+			<div class='col-xs-12 col-sm-12 col-md-12' style='text-align:center; margin-top:10px;'>
+			<button type='button' class='btn btn-center btn-lg btn-primary' onclick='Pasar();'>SIGUIENTE</button>
+			</div>
+		</div>
+		<div class='col-xs-12 col-sm-12 tablaopciones' style='display:none;' id='opcionessalsas'>
+			<div class='col-xs-4 col-sm-4 col-md-4'>
+				<div class='ingrediente' id='17' cal='175' gram='50' nombre='Tokyo' precio='2.75' onclick='AgregarSalsa(this);'>
+				<div class='ingname'>Tokyo</div>
+				<div>
+				<img src='images/bases/pasta.png' style='margin:3px;'/>
+				</div>
+				<span class='inginfo'>
+					<label>175 gr. / </label>
+					<label>50 cal.</label>
+				</span>
+				</div>
+			</div>
+			<div class='col-xs-4 col-sm-4 col-md-4'>
+				<div class='ingrediente' id='18' cal='100' gram='40' nombre='Bangkok' precio='1.00' onclick='AgregarSalsa(this);'>
+				<div class='ingname'>Bangkok</div>
+				<div>
+				<img src='images/bases/arroz.png' style=' margin:3px;'/>
+				</div>
+				<span class='inginfo'>
+					<label>100 gr. / </label>
+					<label>40 cal.</label>
+				</span>
+				</div>
+			</div>
+			<div class='col-xs-4 col-sm-4 col-md-4'>
+				<div class='ingrediente' id='19' cal='100' gram='40' nombre='Bali' precio='1.00' onclick='AgregarSalsa(this);'>
+				<div class='ingname'>Bali</div>
+				<div>
+				<img src='images/bases/arroz.png' style='margin:3px;'/>
+				</div>
+				<span class='inginfo'>
+					<label>100 gr. / </label>
+					<label>40 cal.</label>
+				</span>
+				</div>
+			</div>
+			<div class='col-xs-4 col-sm-4 col-md-4'>
+				<div class='ingrediente' id='20' cal='100' gram='40' nombre='Hong-Kong' precio='1.00' onclick='AgregarSalsa(this);'>
+				<div class='ingname'>Hong-Kong</div>
+				<div>
+				<img src='images/bases/arroz.png' style=' margin:3px;'/>
+				</div>
+				<span class='inginfo'>
+					<label>100 gr. / </label>
+					<label>40 cal.</label>
+				</span>
+				</div>
+			</div>
+			<div class='col-xs-4 col-sm-4 col-md-4'>
+				<div class='ingrediente' id='21' cal='100' gram='40' nombre='Saigón' precio='1.00' onclick='AgregarSalsa(this);'>
+				<div class='ingname'>Saigón</div>
+				<div>
+				<img src='images/bases/arroz.png' style='margin:3px;'/>
+				</div>
+				<span class='inginfo'>
+					<label>100 gr. / </label>
+					<label>40 cal.</label>
+				</span>
+				</div>
+			</div>
+			<div class='col-xs-4 col-sm-4 col-md-4'>
+				<div class='ingrediente' id='22' cal='100' gram='40' nombre='Beijing' precio='1.00' onclick='AgregarSalsa(this);'>
+				<div class='ingname'>Beijing</div>
+				<div>
+				<img src='images/bases/arroz.png' style='margin:3px;'/>
+				</div>
+				<span class='inginfo'>
+					<label>100 gr. / </label>
+					<label>40 cal.</label>
+				</span>
+				</div>
+			</div>
+			<div class='col-xs-4 col-sm-4 col-md-4'>
+				<div class='ingrediente' id='23' cal='100' gram='40' nombre='Hot Asia' precio='1.00' onclick='AgregarSalsa(this);'>
+				<div class='ingname'>Hot Asia</div>
+				<div>
+				<img src='images/bases/arroz.png' style='margin:3px;'/>
+				</div>
+				<span class='inginfo'>
+					<label>100 gr. / </label>
+					<label>40 cal.</label>
+				</span>
+				</div>
+			</div>
+			<div class='col-xs-12 col-sm-12 col-md-12' style='text-align:center; margin-top:10px;'>
+			<button type='button' class='btn btn-center btn-lg btn-primary' onclick='Pasar();'>SIGUIENTE</button>
+			</div>
+		</div>
+	</div>
+</div>
+<div class='col-xs-4 col-sm-4' style='height:100%; min-height:100%;'>
+	<div class='row' style='height:100%; min-height:100%;'>
+		<div class='col-xs-12 col-sm-12 col-md-12' style='height:100%; min-height:100%;'>
+		<div id='contentplato'>
+		<div class='titulo' align='center'>Tu Plato</div>
+		<div class="progress" style='margin:5px;'>
+		  <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width:0%;">
+			0%
+		  </div>
+		</div>
+		<div class='componentes' style='height:65%;'>
+			<ul class="list-group">
+			  <li class="list-group-item">
+				<label class='subtitulo'>Base</label>
+				<table id='tablabase'>
+				</table>
+			  </li>
+			  <li class="list-group-item">
+				<label class='subtitulo'>Favoritos</label>
+				<table id='tablaagregados' class='table-hover'>
+				</table>
+			  </li>
+			  <li class="list-group-item">
+				<label class='subtitulo'>Salsa</label>
+				<table id='tablasalsa'>
+				</table>
+			  </li>
+			</ul>
+		</div>
+		<div style='text-align:right;'>
+		<h3><span class='label label-default'>Total Gramos: <label id='totalgramos' style='text-style:italic;'>0</label> gr.</span></h3>
+		<h3><span class='label label-default'>Total Calorias: <label id='totalcalorias' style='text-style:italic;'>0</label> cal.</span></h3>
+		<h2><span class='label label-danger'>Precio Plato: <label id='totalprecio' style='text-style:italic;'>0</label> USD.</span></h2>
+		</div>
+		</div>
+		</div>
+	</div>
+</div>
+</div>
+<!---modal cuantos platos-->
+<div style='background-color:rgba(0,0,0,0.8); ' class="modal fade" id="modalcuantos" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="false" disabled="disabled" onclick='javascript:void(0);'>
+  <div class="modal-dialog" style='width:35%;'>
+	<div class='modal-content text-center'>
+		<div class="modal-header" style='background-color:#ec7404; ;font-size:40px; padding-top:20px; padding-bottom:20px; text-align:center; color:#FFF;'>Cuantos somos?</div>
+		<div class="modal-body" style='color:#404041;'>
+			<div>
+				Cuantos platos vas a pedir?
+				<input type='number' class='form-element' value='1' id='cuantosplatos'/>
+				<button type='button' class='btn btn-primary' onclick='VerCuenta();'>Ver mi cuenta</button>
+				<button type='button' class='btn btn-primary' onclick='ArmarOtroplato(1);'>Armar otro plato</button>
+			</div>
+		</div>
+	</div>
+   </div>
+</div>
+<!--modal cuenta--->
+<div style='background-color:rgba(0,0,0,0.8); ' class="modal fade" id="modalmicuenta" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="false" disabled="disabled" onclick='javascript:void(0);'>
+  <div class="modal-dialog" style='width:35%;'>
+	<div class='modal-content text-center'>
+		<div class="modal-header" style='background-color:#ec7404; font-size:40px; padding-top:20px; padding-bottom:20px; text-align:center; color:#FFF;'>Mi cuenta</div>
+		<div class="modal-body" style='color:#404041;'>
+			<div class="panel panel-default">
+			  <div class="panel-heading">Detalle de tu pedido:</div>
+			  <div class="panel-body">
+				<table class='table-striped' id='tablamisplatos' style='width:100%; font-size:12px;'>
+					<thead><tr><th>Item</th><th>Cantidad</th><th>Precio Unitario</th><th>Precio Total</th></tr></thead>
+					<tbody></tbody>
+				</table>
+				<div style='text-align:center;'>
+					<h3><span class='label label-danger'>Precio Total Pedido: <label id='prectotalpedido' style='text-style:italic;'>0</label> USD.</span></h3>
+				</div>
+			  </div>
+			  <button type='button' class='btn btn-primary' onclick='ArmarOtroplato();' style='margin:3px;'>Armar otro plato</button>
+			  <button type='button' class='btn btn-primary' onclick='' style='margin:3px;'>Hacer Pedido</button>
+			</div>
+		</div>
+	</div>
+   </div>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>
